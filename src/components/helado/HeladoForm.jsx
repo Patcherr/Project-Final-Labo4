@@ -27,6 +27,7 @@ export default function HeladoForm() {
           nombre: h.nombre,
           descripcion: h.descripcion,
           precio: h.precio,
+          ingredientesIds:[],
           isArtesanal: h.isArtesanal,
           ingredientesIds: [] 
         })
@@ -98,6 +99,7 @@ const handleSubmit = async (e) => {
             <option key={ing.id} value={ing.id}>{ing.nombre}</option>
           ))}
         </select>
+        {errores.ingredientesIds && <p className="error">{errores.ingredientesIds}</p>}
       </label>
 
       <button type="submit">{isEdit ? 'Actualizar' : 'Crear'}</button>

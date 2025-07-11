@@ -22,6 +22,7 @@ export default function HeladoDetail() {
         <li><strong>Descripción:</strong> {helado.descripcion}</li>
         <li><strong>Precio:</strong> ${helado.precio.toFixed(2)}</li>
         <li><strong>Estado:</strong> {helado.estado?.nombre}</li>
+        <li><strong>Ingredientes:</strong>{helado.ingrediente}</li>
         <li><strong>¿Es artesanal?:</strong> {helado.isArtesanal ? 'Sí' : 'No'}</li>
         <li><strong>Fecha creación:</strong> {helado.fechaCreacion}</li>
       </ul>

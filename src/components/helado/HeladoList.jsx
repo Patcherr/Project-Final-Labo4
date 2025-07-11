@@ -38,20 +38,20 @@ export default function HeladoList() {
       <table>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Estado</th>
+            <th>Ingredientes</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           {helados.map((h) => (
             <tr key={h.id}>
-              <td>{h.id}</td>
               <td>{h.nombre}</td>
               <td>${h.precio.toFixed(2)}</td>
               <td>{h.estado?.nombre}</td>
+              <td>{h.ingredientes.join(', ')}</td>
               <td>
                 <button onClick={() => navigate(`/helados/${h.id}`)}>Ver</button>
                 <button onClick={() => navigate(`/helados/${h.id}/editar`)}>Editar</button>
