@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://localhost:7051/api/ingredientes';
+const baseURL = import.meta.env.VITE_API_URL + '/ingredientes';
 
 export const getIngredientes = () =>
   axios.get(baseURL).then(res => res.data);

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://localhost:7051/api/helados';
+const baseURL = import.meta.env.VITE_API_URL + '/helados';
 
 export const getHelados = () =>
   axios.get(baseURL).then(res => res.data);
