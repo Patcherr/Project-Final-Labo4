@@ -20,9 +20,11 @@ export default function SalsaDetail() {
         <li><strong>ID:</strong> {salsa.id}</li>
         <li><strong>Nombre:</strong> {salsa.nombre}</li>
         <li><strong>Sin TACC:</strong> {salsa.isSinTac ? "Sí" : "No"}</li>
-        <li><strong>Ingredientes:</strong> {salsa.ingredientes.join(', ')}</li>
+        <li><strong>Ingredientes:</strong>{' '}
+        {salsa.ingredientes?.map((i) => i.nombre).join(',')}
+        </li>
       </ul>
-      <button onClick={() => navigate('/salsas')}>← Volver</button>
+      <button onClick={() => navigate('/salsas')} className='btn-volver'>← Volver</button>
     </div>
   );
 }

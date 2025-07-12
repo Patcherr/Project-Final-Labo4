@@ -20,7 +20,7 @@ export default function IngredienteDetail() {
         <li><strong>ID:</strong> {ingrediente.id}</li>
         <li><strong>Nombre:</strong> {ingrediente.nombre}</li>
       </ul>
-      <button onClick={() => navigate('/ingredientes')}>← Volver</button>
+      <button onClick={() => navigate('/ingredientes')} className='btn-volver'>← Volver</button>
     </div>
   );
 }

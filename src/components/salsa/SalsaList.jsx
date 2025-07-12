@@ -33,7 +33,10 @@ export default function SalsaList() {
   return (
     <div>
       <h2>Salsas</h2>
-      <button onClick={() => navigate('/salsas/nueva')}>➕ Nueva Salsa</button>
+      <div className="actions-bar">
+        <button onClick={() => navigate('/salsas/nueva')} className='btn-add'>➕ Nueva Salsa</button>
+        <button onClick={() => navigate("/")} className='btn-volver'> ← Volver</button>
+      </div>
       {error && <p className="error">{error}</p>}
       <table>
         <thead>
@@ -52,13 +55,14 @@ export default function SalsaList() {
               <td>{salsa.ingredientes.join(', ')}</td>
               <td>
                 <button onClick={() => navigate(`/salsas/${salsa.id}`)}>Ver</button>
-                <button onClick={() => navigate(`/salsas/${salsa.id}`/editar)}>Editar</button>
+                <button onClick={() => navigate(`/salsas/${salsa.id}/editar`)}>Editar</button>
                 <button onClick={() => handleEliminar(salsa.id)}>Eliminar</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      
     </div>
   );
 }

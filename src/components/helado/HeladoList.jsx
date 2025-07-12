@@ -33,7 +33,10 @@ export default function HeladoList() {
   return (
     <div>
       <h2>Lista de Helados</h2>
-      <button onClick={() => navigate('/helados/nuevo')}>➕ Nuevo Helado</button>
+      <div className="actions-bar">
+        <button onClick={() => navigate('/helados/nuevo')} className='btn-add'>➕ Nuevo Helado</button>
+        <button className="btn-volver" onClick={() => navigate("/")}> ← Volver</button>   
+      </div>
       {error && <p className="error">{error}</p>}
       <table>
         <thead>
@@ -48,19 +51,20 @@ export default function HeladoList() {
         <tbody>
           {helados.map((h) => (
             <tr key={h.id}>
-              <td>{h.nombre}</td>
-              <td>${h.precio.toFixed(2)}</td>
-              <td>{h.estado?.nombre}</td>
-              <td>{h.ingredientes.join(', ')}</td>
-              <td>
-                <button onClick={() => navigate(`/helados/${h.id}`)}>Ver</button>
+              <td data-label="Nombre">{h.nombre}</td>
+              <td data-label="Precio">${h.precio.toFixed(2)}</td>
+              <td data-label="Estado">{h.estado?.nombre}</td>
+              <td data-label="Ingredientes">{h.ingredientes.join(', ')}</td>
+              <td data-label="Acciones">
+                <button  onClick={() => navigate(`/helados/${h.id}`)}>Ver</button>
                 <button onClick={() => navigate(`/helados/${h.id}/editar`)}>Editar</button>
-                <button onClick={() => handleEliminar(h.id)}>Eliminar</button>
+                <button onClick={() => handleEliminar(h.id)}>Eliminar</button>               
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+    
     </div>
   );
 }

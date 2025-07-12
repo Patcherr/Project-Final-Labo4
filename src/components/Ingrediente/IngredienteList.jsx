@@ -33,7 +33,10 @@ export default function IngredienteList() {
   return (
     <div>
       <h2>Ingredientes</h2>
-      <button onClick={() => navigate('/ingredientes/nuevo')}>➕ Nuevo Ingrediente</button>
+      <div className='actions-bar'>
+        <button onClick={() => navigate('/ingredientes/nuevo')} className='btn-add'>➕ Nuevo Ingrediente</button>
+        <button onClick={() => navigate("/")} className='btn-volver'> ← Volver</button>
+      </div>
       {error && <p className="error">{error}</p>}
       <table>
         <thead>
@@ -55,6 +58,7 @@ export default function IngredienteList() {
           ))}
         </tbody>
       </table>
+      
     </div>
   );
 }

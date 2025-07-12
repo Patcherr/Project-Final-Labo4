@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --primary: #64c0c8;
+  --primary-dark: #3fa0b0;
+  --accent: #fbe8d3;
+  --background: #f7b2c4;
+  --section: #ffffff;
+  --text: #333;
+  --error: #d93025;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Poller One';
+  background-color: var(--background);
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #7c4b40; 
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+
+

@@ -1,0 +1,118 @@
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--section);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background-color: var(--primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--primary-dark);
+}
+
+.section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.home-container {
+  font-family: 'Dancing Script', cursive;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  
+}
+
+.home-logo {
+  width: 120px;
+  height: auto;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+}
+
+.home-buttons {
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.home-buttons button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+}
+
+.home-buttons button:hover {
+  background-color: #f7b2c4;
+}
