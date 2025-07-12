@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_URL + '/salsas';
+const baseURL = 'https://localhost:7051/api/salsas';
 
 export const getSalsas = () =>
   axios.get(baseURL).then(res => res.data);
